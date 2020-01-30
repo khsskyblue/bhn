@@ -47,7 +47,7 @@
         "url": "https://fonts.googleapis.com/css?family=Black+Han+Sans:400"
       }
     ],
-    "uniqCompNum": 18,
+    "uniqCompNum": 19,
     "versionPublish": "4.12.0",
     "imageResize": true,
     "screenshot": "screenshot.png"
@@ -685,6 +685,190 @@
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
             "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "@media (min-width: 767px)": {
+              ".container": {
+                "padding": "1rem"
+              }
+            },
+            ".card-box": {
+              "padding": "0 2rem"
+            },
+            ".card when not (@showPadding)": {
+              "padding": "0!important"
+            },
+            ".mbr-section-btn": {
+              "padding-top": "2rem"
+            },
+            ".container-fluid when (@fullWidth) and not (@showPadding)": {
+              "padding": "0"
+            },
+            ".card1": {
+              "background-image": "url(@card1bg)"
+            },
+            ".card2 when (@cardsAmount > \"1\")": {
+              "background-image": "url(@card2bg)"
+            },
+            ".card3 when (@cardsAmount > \"2\")": {
+              "background-image": "url(@card3bg)"
+            },
+            ".card4 when (@cardsAmount > \"3\")": {
+              "background-image": "url(@card4bg)"
+            },
+            "h4": {
+              "font-weight": "500",
+              "margin-bottom": "0",
+              "padding-top": "2rem"
+            },
+            "p": {
+              "margin-bottom": "0",
+              "padding-top": "1.5rem",
+              "& when not (@showTitle)": {
+                "padding-top": "2rem"
+              }
+            },
+            ".card-wrapper": {
+              "height": "100%",
+              "padding": "25rem 2rem 5rem 2rem",
+              "background-size": "cover"
+            },
+            ".btn": {
+              "margin": "0!important",
+              "padding": "1rem 2rem"
+            },
+            "@media (max-width: 767px)": {
+              ".card-wrapper": {
+                "padding": "15rem 1rem 3rem 1rem"
+              }
+            }
+          },
+          "_name": "extFeatures67",
+          "_customHTML": "<section class=\"features3\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Show Padding\" name=\"showPadding\">\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n        </select>\n        <input type=\"image\" name=\"card1bg\" title=\"Card 1 Bg\" value=\"../_images/carousel/1.jpg\" condition=\"cardsAmount > 0\">\n        <input type=\"image\" name=\"card2bg\" title=\"Card 2 Bg\" value=\"../_images/carousel/3.jpg\" condition=\"cardsAmount > 1\">\n        <input type=\"image\" name=\"card3bg\" title=\"Card 3 Bg\" value=\"../_images/img/38.jpg\" condition=\"cardsAmount > 2\">\n        <input type=\"image\" name=\"card4bg\" title=\"Card 4 Bg\" value=\"@PROJECT_PATH@/assets/images/mbr-2-1920x1280.jpg\" condition=\"cardsAmount > 3\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background5.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth,'container-fluid': fullWidth}\">\n        <div mbr-cards=\"bootstrap\" mbr-class=\"{'media-container-row': !showPadding, 'row': showPadding }\">\n            <div class=\"card p-3 col-12 col-md-6\" mbr-class=\"{'col-lg-6': cardsAmount == '2', 'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper card1\">\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title align-left mbr-semibold mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">지니브레인</h4>\n                        <p class=\"mbr-text align-left mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                            뇌과학교육</p>\n                        <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobirise.co\" class=\"btn btn-md btn-secondary\" data-app-placeholder=\"Type Text\">더 알아보기 &gt;</a></div>\n                    </div>\n\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-6': cardsAmount == '2', 'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper card2\">\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title align-left mbr-semibold mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            아이엠선교회</h4>\n                        <p class=\"mbr-text align-left mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">기독교</p>\n                        <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobirise.co\" class=\"btn btn-md btn-secondary\" data-app-placeholder=\"Type Text\">더 알아보기 &gt;</a></div>\n                    </div>\n\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper card3\">\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title align-left mbr-semibold mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            교회</h4>\n                        <p class=\"mbr-text align-left mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                            기독교</p>\n                        <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobirise.co\" class=\"btn btn-md btn-secondary\" data-app-placeholder=\"Type Text\">더 알아보기 &gt;</a></div>\n                    </div>\n\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6 col-lg-3\" mbr-if=\"cardsAmount > 3\">\n                <div class=\"card-wrapper card4\">\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title align-left mbr-semibold mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">기업/단체</h4>\n                        <p class=\"mbr-text align-left mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                            각종기관</p>\n                        <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobirise.co\" class=\"btn btn-md btn-secondary\" data-app-placeholder=\"Type Text\">더 알아보기 &gt;</a></div>\n                    </div>\n\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rP2LMTFdc1",
+          "_anchor": "extFeatures67-h",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "mobirise4-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            ".number-wrap": {
+              "color": "@labelsColor",
+              "border-color": "rgba(255, 255, 255, 0.15)",
+              "position": "relative",
+              "display": "inline-block",
+              "text-align": "center",
+              "padding": "5px 10px 13px 10px",
+              "margin": "0",
+              "min-width": "118px",
+              "border-radius": "2px",
+              "max-width": "100%"
+            },
+            ".number": {
+              "font-style": "normal",
+              "font-weight": "700",
+              "font-size": "55px",
+              "text-transform": "none",
+              "letter-spacing": "-2px",
+              "word-spacing": "0",
+              "line-height": "1.3",
+              "color": "@numbersColor"
+            },
+            ".period": {
+              "display": "block",
+              "padding-top": "2px",
+              "border-top": "1px solid rgba(0, 0, 0, 0.1)"
+            },
+            ".dot": {
+              "position": "absolute",
+              "top": "-10px",
+              "right": "-0.8em",
+              "width": "1em",
+              "display": "block",
+              "height": "83%",
+              "overflow": "hidden",
+              "font-style": "normal",
+              "font-weight": "700",
+              "font-size": "55px",
+              "line-height": "89.65px",
+              "text-transform": "none",
+              "letter-spacing": "0",
+              "word-spacing": "0",
+              "color": "@numbersColor"
+            },
+            ".countdown-cont": {
+              "margin": "0 auto"
+            },
+            ".full-count-container": {
+              "background": "@countdownBg"
+            },
+            "@media (min-width: 992px) and (max-width: 1200px)": {
+              ".dot": {
+                "right": "-0.6em"
+              }
+            },
+            "@media (min-width: 768px) and (max-width: 991px)": {
+              ".dot": {
+                "right": "-1em"
+              }
+            },
+            "@media (max-width: 768px)": {
+              ".dot": {
+                "display": "none"
+              },
+              ".number": {
+                "white-space": "nowrap"
+              }
+            },
+            "@media (max-width: 550px)": {
+              ".number-wrap": {
+                "min-width": "auto"
+              }
+            },
+            "@media (max-width: 440px)": {
+              ".number": {
+                "font-size": "40px"
+              }
+            },
+            "@media (max-width: 380px)": {
+              ".period": {
+                "font-size": "0.8rem"
+              }
+            },
+            "@media (max-width: 300px)": {
+              ".number": {
+                "font-size": "25px"
+              },
+              ".period": {
+                "font-size": "0.7rem"
+              }
+            }
+          },
+          "_name": "extCountdown3",
+          "_customHTML": "<section class=\"extCountdown\" group=\"Additional Blocks\" plugins=\"countdown\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"text\" title=\"Countdown\" name=\"countdown\" value=\"2020/06/01\">\n        <input type=\"text\" inline title=\"Days\" name=\"daysCountdown\" value=\"Days\">\n        <input type=\"text\" inline title=\"Hours\" name=\"hoursCountdown\" value=\"Hours\">\n        <input type=\"text\" inline title=\"Minutes\" name=\"minutesCountdown\" value=\"Minutes\">\n        <input type=\"text\" inline title=\"Seconds\" name=\"secondsCountdown\" value=\"Seconds\">\n        <input type=\"color\" title=\"Numbers Color\" name=\"numbersColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Labels Color\" name=\"labelsColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Countdown Background\" name=\"countdownBg\" value=\"#2e2e2e\">\n        <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"container-fluid pt-5 pb-5 full-count-container\">\n        <div class=\"container\">\n            <div class=\"row justify-content-center\">\n                <div class=\"col-lg-6 mbr-white\" mbr-if=\"showText\" mbr-class=\"{'order-2 pt-lg-0 pt-2':reverseContent, 'pb-lg-0 pb-2':!reverseContent}\">\n                    <h2 class=\"mbr-section-title mbr-fonts-style m-0\" mbr-theme-style=\"display-5\">반응형 홈페이지 제작 오픈기념 D-day<br> - Save 20%</h2>\n                </div>\n                <div class=\"countdown-cont align-center col-lg-6\">\n                    <div title=\"{{daysCountdown}}\" class=\"daysCountdown\"></div>\n                    <div title=\"{{hoursCountdown}}\" class=\"hoursCountdown\"></div> \n                    <div title=\"{{minutesCountdown}}\" class=\"minutesCountdown\"></div> \n                    <div title=\"{{secondsCountdown}}\" class=\"secondsCountdown\"></div>\n                    <div class=\"countdown \" data-due-date=\"{{countdown}}\"> \n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rP2VfZvIOh",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "extCountdown3-i"
+        },
+        {
+          "alias": "mobirise4-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
               "background": "@bg-value",
               "& when (@gradientBg)": {
                 "background": "linear-gradient(90deg, @bg-value, @color2)"
@@ -826,84 +1010,6 @@
           "_customHTML": "<section class=\"tabs1\" group=\"Pricing Tables\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input inline type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input inline type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"checkbox\" title=\"Show Tabs\" name=\"showTabs\" checked>\n        <input type=\"checkbox\" title=\"Show Styles Tabs\" name=\"showStyles\" condition=\"showTabs\" checked>\n        <input type=\"color\" title=\"Tabs Color\" name=\"tabsColor\" value=\"#ffffff\" condition=\"showStyles && showTabs\">\n        <input type=\"color\" title=\"Tab Border\" name=\"tabsBorder\" value=\"#ffffff\" condition=\"showStyles && showTabs\">\n        <input type=\"color\" title=\"Tab Bg Active\" name=\"tabsBg\" value=\"#d61e37\" condition=\"showStyles && showTabs\">\n        <input type=\"checkbox\" title=\"Show Titles\" name=\"showTitles\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitles\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Price Term\" name=\"showPriceTerm\" checked>\n        <input type=\"color\" title=\"Price Term Bg\" name=\"termBg\" value=\"#ffffff\" condition=\"showPriceTerm\">\n        <input type=\"color\" title=\"Lines Color\" name=\"lineColor\" value=\"#eaeaea\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <input type=\"color\" title=\"Card Color\" name=\"cardColor\" value=\"#d61e37\">\n        <input type=\"range\" inline title=\"Card Opacity\" name=\"cardOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\">\n        \n        <select title=\"Items Count\" name=\"itemsCount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#000000\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"bg.type == 'color'\">\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#21b968\" condition=\"bg.type=='color'&&gradientBg\" selected>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay&&bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <ul class=\"nav nav-tabs mb-4 justify-content-center mx-auto\" role=\"tablist\" mbr-class=\"{'d-flex': showTabs}\" mbr-if=\"showTabs\">\n            <li mbr-buttons mbr-theme-style=\"display-4\" class=\"nav-item first mbr-section-btn\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\"><a class=\"btn mbr-fonts-style btn-bgr show btn-black-outline active\" role=\"tab\" data-toggle=\"tab\" href=\"#extTabs15-b_tab0\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">매년 (save 20%)</a></li>\n            <li mbr-buttons mbr-theme-style=\"display-4\" class=\"nav-item mbr-section-btn\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\"><a class=\"btn mbr-fonts-style btn-bgr show btn-black-outline\" role=\"tab\" data-toggle=\"tab\" href=\"#extTabs15-b_tab1\" data-app-placeholder=\"Type Text\" aria-selected=\"false\">월간</a></li>\n        </ul>\n        <div class=\"tab-content\">\n            <div id=\"tab1\" class=\"tab-pane in active\" role=\"tabpanel\">\n                <div class=\"row align-items-start\">\n                    <div class=\"col-md-6 justify-content-center\" mbr-if=\"itemsCount > 0\" mbr-class=\"{\n                         'col-lg-4': itemsCount == 3,\n                         'col-lg-6': itemsCount == 2,\n                         'col-lg-3': itemsCount == 4}\">\n                        <div class=\"plan\">\n                            <div class=\"mbr-overlay\"></div>\n                            <div class=\"plan-header text-center\">\n                                <h3 class=\"plan-title mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-title\">\n                                    Standard</h3>\n                                <h4 class=\"plan-subtitle mbr-white mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".plan-subtitle\">아름다운. 심플한 웹 사이트</h4>\n                                <div class=\"plan-price\">\n                                    <span mbr-text class=\"price-figure mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-price .price-figure\">\n                                        60만원</span>\n                                    <div class=\"price-term mbr-black\" mbr-if=\"showPriceTerm\">\n                                        <div class=\"term mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-text data-app-selector=\".price-term\">per year</div>\n                                    </div>\n                                    <p class=\"mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">일반 반응형웹<br>※ 도메인/호스팅 별도</p>\n                                </div>\n                            </div>\n                            <div class=\"plan-body\">\n                                <div class=\"plan-list align-center\">\n                                    <ul mbr-text class=\"list-group list-group-flush mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-btn, .list-group\">\n                                        <li class=\"list-group-item\"><span style=\"background-color: initial; font-size: 1rem;\">원페이지</span><br></li>\n                                    </ul>\n                                </div>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn align-center pt-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"tel:1899-8188\" class=\"btn btn-black btn-bgr\" data-app-placeholder=\"Type Text\">전화문의</a></div>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"col-md-6 justify-content-center\" mbr-if=\"itemsCount > 1\" mbr-class=\"{\n                         'col-lg-4': itemsCount == 3,\n                         'col-lg-6': itemsCount == 2,\n                         'col-lg-3': itemsCount == 4}\">\n                        <div class=\"plan\">\n                            <div class=\"mbr-overlay\"></div>\n                            <div class=\"plan-header text-center\">\n                                <h3 class=\"plan-title mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-title\">\n                                    Business\n                                </h3>\n                                <h4 class=\"plan-subtitle mbr-white mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".plan-subtitle\">아름다운. 적당한 웹 사이트</h4>\n                                <div class=\"plan-price\">\n                                    <span mbr-text class=\"price-figure mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-price .price-figure\">\n                                        120만원</span>\n                                    <div class=\"price-term mbr-black\" mbr-if=\"showPriceTerm\">\n                                        <div class=\"term mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-text data-app-selector=\".price-term\">per year</div>\n                                    </div>\n                                    <p class=\"mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">비지니스 반응형웹<br>※ 도메인/호스팅 별도<br></p>\n                                </div>\n                            </div>\n                            <div class=\"plan-body\">\n                                <div class=\"plan-list align-center\">\n                                    <ul mbr-text class=\"list-group list-group-flush mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-btn, .list-group\">\n                                        <li class=\"list-group-item\"><span style=\"background-color: initial; font-size: 1rem;\">상세페이지</span></li><li class=\"list-group-item\">소셜연동</li>\n                                    </ul>\n                                </div>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn align-center pt-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"tel:1899-8188\" class=\"btn btn-black btn-bgr\" data-app-placeholder=\"Type Text\">전화문의</a></div>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"col-md-6 justify-content-center\" mbr-if=\"itemsCount > 2\" mbr-class=\"{\n                         'col-lg-4': itemsCount == 3,\n                         'col-lg-6': itemsCount == 2,\n                         'col-lg-3': itemsCount == 4}\">\n                        <div class=\"plan\">\n                            <div class=\"mbr-overlay\"></div>\n                            <div class=\"plan-header text-center\">\n                                <h3 class=\"plan-title mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-title\">\n                                    Premium\n                                </h3>\n                                <h4 class=\"plan-subtitle mbr-white mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".plan-subtitle\">\n                                    아름다운. 고급진 웹 사이트\n                                </h4>\n                                <div class=\"plan-price\">\n                                    <span mbr-text class=\"price-figure mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-price .price-figure\">360만원</span>\n                                    <div class=\"price-term mbr-black\" mbr-if=\"showPriceTerm\">\n                                        <div class=\"term mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-text data-app-selector=\".price-term\">per year</div>\n                                    </div>\n                                    <p class=\"mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">고급 반응형웹<br>※ 도메인/호스팅 별도<br></p>\n                                </div>\n                            </div>\n                            <div class=\"plan-body\">\n                                <div class=\"plan-list align-center\">\n                                    <ul mbr-text class=\"list-group list-group-flush mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-btn, .list-group\">\n                                        <li class=\"list-group-item\">고급 디자인</li><li class=\"list-group-item\">상세페이지</li><li class=\"list-group-item\">소셜연동</li>\n                                    </ul>\n                                </div>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn align-center pt-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"tel:1899-8188\" class=\"btn btn-black btn-bgr\" data-app-placeholder=\"Type Text\">전화문의</a></div>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"col-md-6 justify-content-center\" mbr-if=\"itemsCount > 3\" mbr-class=\"{\n                         'col-lg-4': itemsCount == 3,\n                         'col-lg-6': itemsCount == 2,\n                         'col-lg-3': itemsCount == 4}\">\n                        <div class=\"plan\">\n                            <div class=\"mbr-overlay\"></div>\n                            <div class=\"plan-header text-center\">\n                                <h3 class=\"plan-title mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-title\">\n                                    Ultimate\n                                </h3>\n                                <h4 class=\"plan-subtitle mbr-white mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".plan-subtitle\">아름다운. 최고 웹 사이트</h4>\n                                <div class=\"plan-price\">\n                                    <span mbr-text class=\"price-figure mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-price .price-figure\">600만원</span>\n                                    <div class=\"price-term mbr-black\" mbr-if=\"showPriceTerm\">\n                                        <div class=\"term mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-text data-app-selector=\".price-term\">per year</div>\n                                    </div>\n                                    <p class=\"mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">최고급 반응형웹<br>※ 도메인/호스팅 별도<br></p>\n                                </div>\n                            </div>\n                            <div class=\"plan-body\">\n                                <div class=\"plan-list align-center\">\n                                    <ul mbr-text class=\"list-group list-group-flush mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-btn, .list-group\">\n                                        <li class=\"list-group-item\">커스텀 디자인</li><li class=\"list-group-item\">상세페이지</li><li class=\"list-group-item\">유투브TV채널 연동</li><li class=\"list-group-item\">회원 연동</li><li class=\"list-group-item\"><span style=\"background-color: initial; font-size: 1rem;\">DB 연동</span></li>\n                                        <li class=\"list-group-item\"><span style=\"background-color: initial; font-size: 1rem;\">게시판 연동</span></li><li class=\"list-group-item\"><span style=\"background-color: initial; font-size: 1rem;\">앱 연동</span><br></li>\n                                    </ul>\n                                </div>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn align-center pt-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"tel:1899-8188\" class=\"btn btn-black btn-bgr\" data-app-placeholder=\"Type Text\">전화문의</a></div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div id=\"tab2\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"showTabs\">\n                <div class=\"row align-items-start\">\n                    <div class=\"col-md-6 justify-content-center\" mbr-if=\"itemsCount > 0\" mbr-class=\"{\n                         'col-lg-4': itemsCount == 3,\n                         'col-lg-6': itemsCount == 2,\n                         'col-lg-3': itemsCount == 4}\">\n                        <div class=\"plan\">\n                            <div class=\"mbr-overlay\"></div>\n                            <div class=\"plan-header text-center\">\n                                <h3 class=\"plan-title mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-title\">\n                                    Standard</h3>\n                                <h4 class=\"plan-subtitle mbr-white mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".plan-subtitle\">아름다운. 간단한 웹 사이트</h4>\n                                <div class=\"plan-price\">\n                                    <span mbr-text class=\"price-figure mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-price .price-figure\">\n                                        5만원</span>\n                                    <div class=\"price-term mbr-black\" mbr-if=\"showPriceTerm\">\n                                        <div class=\"term mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-text data-app-selector=\".price-term\">per month</div>\n                                    </div>\n                                    <p class=\"mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">\n                                        반응형웹<br>※ 도메인/호스팅 별도<br>\n                                    </p>\n                                </div>\n                            </div>\n                            <div class=\"plan-body\">\n                                <div class=\"plan-list align-center\">\n                                    <ul mbr-text class=\"list-group list-group-flush mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-btn, .list-group\">\n                                        <li class=\"list-group-item\">\n                                            5 GB Bandwidth\n                                        </li>\n                                        <li class=\"list-group-item\">\n                                            10 GB Bandwidth\n                                        </li>\n                                        <li class=\"list-group-item\">\n                                            15 GB Bandwidth\n                                        </li>\n                                    </ul>\n                                </div>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn align-center pt-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobirise.com\" class=\"btn btn-black btn-bgr\" data-app-placeholder=\"Type Text\">전화문의</a></div>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"col-md-6 justify-content-center\" mbr-if=\"itemsCount > 1\" mbr-class=\"{\n                         'col-lg-4': itemsCount == 3,\n                         'col-lg-6': itemsCount == 2,\n                         'col-lg-3': itemsCount == 4}\">\n                        <div class=\"plan\">\n                            <div class=\"mbr-overlay\"></div>\n                            <div class=\"plan-header text-center\">\n                                <h3 class=\"plan-title mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-title\">\n                                    Business\n                                </h3>\n                                <h4 class=\"plan-subtitle mbr-white mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".plan-subtitle\">아름다운. 간단한 웹 사이트</h4>\n                                <div class=\"plan-price\">\n                                    <span mbr-text class=\"price-figure mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-price .price-figure\">\n                                        10만원</span>\n                                    <div class=\"price-term mbr-black\" mbr-if=\"showPriceTerm\">\n                                        <div class=\"term mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-text data-app-selector=\".price-term\">per month</div>\n                                    </div>\n                                    <p class=\"mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">\n                                        반응형웹<br>※ 도메인/호스팅 별도<br>\n                                    </p>\n                                </div>\n                            </div>\n                            <div class=\"plan-body\">\n                                <div class=\"plan-list align-center\">\n                                    <ul mbr-text class=\"list-group list-group-flush mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-btn, .list-group\">\n                                        <li class=\"list-group-item\">\n                                            10 GB Bandwidth\n                                        </li>\n                                        <li class=\"list-group-item\">\n                                            15 GB Bandwidth\n                                        </li>\n                                        <li class=\"list-group-item\">\n                                            20 GB Bandwidth\n                                        </li>\n                                    </ul>\n                                </div>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn align-center pt-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobirise.com\" class=\"btn btn-black btn-bgr\" data-app-placeholder=\"Type Text\">전화문의</a></div>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"col-md-6 justify-content-center\" mbr-if=\"itemsCount > 2\" mbr-class=\"{\n                         'col-lg-4': itemsCount == 3,\n                         'col-lg-6': itemsCount == 2,\n                         'col-lg-3': itemsCount == 4}\">\n                        <div class=\"plan\">\n                            <div class=\"mbr-overlay\"></div>\n                            <div class=\"plan-header text-center\">\n                                <h3 class=\"plan-title mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-title\">\n                                    Premium\n                                </h3>\n                                <h4 class=\"plan-subtitle mbr-white mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".plan-subtitle\">아름다운. 간단한 웹 사이트</h4>\n                                <div class=\"plan-price\">\n                                    <span mbr-text class=\"price-figure mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-price .price-figure\">30만원</span>\n                                    <div class=\"price-term mbr-black\" mbr-if=\"showPriceTerm\">\n                                        <div class=\"term mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-text data-app-selector=\".price-term\">per month</div>\n                                    </div>\n                                    <p class=\"mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">\n                                        반응형웹<br>※ 도메인/호스팅 별도\n                                    </p>\n                                </div>\n                            </div>\n                            <div class=\"plan-body\">\n                                <div class=\"plan-list align-center\">\n                                    <ul mbr-text class=\"list-group list-group-flush mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-btn, .list-group\">\n                                        <li class=\"list-group-item\">\n                                            15 GB Bandwidth\n                                        </li>\n                                        <li class=\"list-group-item\">\n                                            20 GB Bandwidth\n                                        </li>\n                                        <li class=\"list-group-item\">\n                                            25 GB Bandwidth\n                                        </li>\n                                    </ul>\n                                </div>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn align-center pt-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobirise.com\" class=\"btn btn-bgr btn-black\" data-app-placeholder=\"Type Text\">전화문의</a></div>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"col-md-6 justify-content-center\" mbr-if=\"itemsCount > 3\" mbr-class=\"{\n                         'col-lg-4': itemsCount == 3,\n                         'col-lg-6': itemsCount == 2,\n                         'col-lg-3': itemsCount == 4}\">\n                        <div class=\"plan\">\n                            <div class=\"mbr-overlay\"></div>\n                            <div class=\"plan-header text-center\">\n                                <h3 class=\"plan-title mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-title\">\n                                    Ultimate\n                                </h3>\n                                <h4 class=\"plan-subtitle mbr-white mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".plan-subtitle\">아름다운. 간단한 웹 사이트</h4>\n                                <div class=\"plan-price\">\n                                    <span mbr-text class=\"price-figure mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-price .price-figure\">50만원</span>\n                                    <div class=\"price-term mbr-black\" mbr-if=\"showPriceTerm\">\n                                        <div class=\"term mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-text data-app-selector=\".price-term\">per month</div>\n                                    </div>\n                                    <p class=\"mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">최고급 반응형웹<br>※ 도메인/호스팅 별도</p>\n                                </div>\n                            </div>\n                            <div class=\"plan-body\">\n                                <div class=\"plan-list align-center\">\n                                    <ul mbr-text class=\"list-group list-group-flush mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-btn, .list-group\">\n                                        <li class=\"list-group-item\">\n                                            20 GB Bandwidth\n                                        </li>\n                                        <li class=\"list-group-item\">\n                                            25 GB Bandwidth\n                                        </li>\n                                        <li class=\"list-group-item\">\n                                            30 GB Bandwidth\n                                        </li>\n                                    </ul>\n                                </div>\n                                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn align-center pt-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobirise.com\" class=\"btn btn-black btn-bgr\" data-app-placeholder=\"Type Text\">전화문의</a></div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "rP2kKTOMKS",
           "_anchor": "extTabs15-b",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": "mobirise4-blocks/components",
-          "_isSecondary": true,
-          "typeCompatible": "type",
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            "@media (min-width: 767px)": {
-              ".container": {
-                "padding": "1rem"
-              }
-            },
-            ".card-box": {
-              "padding": "0 2rem"
-            },
-            ".card when not (@showPadding)": {
-              "padding": "0!important"
-            },
-            ".mbr-section-btn": {
-              "padding-top": "2rem"
-            },
-            ".container-fluid when (@fullWidth) and not (@showPadding)": {
-              "padding": "0"
-            },
-            ".card1": {
-              "background-image": "url(@card1bg)"
-            },
-            ".card2 when (@cardsAmount > \"1\")": {
-              "background-image": "url(@card2bg)"
-            },
-            ".card3 when (@cardsAmount > \"2\")": {
-              "background-image": "url(@card3bg)"
-            },
-            ".card4 when (@cardsAmount > \"3\")": {
-              "background-image": "url(@card4bg)"
-            },
-            "h4": {
-              "font-weight": "500",
-              "margin-bottom": "0",
-              "padding-top": "2rem"
-            },
-            "p": {
-              "margin-bottom": "0",
-              "padding-top": "1.5rem",
-              "& when not (@showTitle)": {
-                "padding-top": "2rem"
-              }
-            },
-            ".card-wrapper": {
-              "height": "100%",
-              "padding": "25rem 2rem 5rem 2rem",
-              "background-size": "cover"
-            },
-            ".btn": {
-              "margin": "0!important",
-              "padding": "1rem 2rem"
-            },
-            "@media (max-width: 767px)": {
-              ".card-wrapper": {
-                "padding": "15rem 1rem 3rem 1rem"
-              }
-            }
-          },
-          "_name": "extFeatures67",
-          "_customHTML": "<section class=\"features3\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Show Padding\" name=\"showPadding\">\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n        </select>\n        <input type=\"image\" name=\"card1bg\" title=\"Card 1 Bg\" value=\"../_images/carousel/1.jpg\" condition=\"cardsAmount > 0\">\n        <input type=\"image\" name=\"card2bg\" title=\"Card 2 Bg\" value=\"../_images/carousel/3.jpg\" condition=\"cardsAmount > 1\">\n        <input type=\"image\" name=\"card3bg\" title=\"Card 3 Bg\" value=\"../_images/img/38.jpg\" condition=\"cardsAmount > 2\">\n        <input type=\"image\" name=\"card4bg\" title=\"Card 4 Bg\" value=\"@PROJECT_PATH@/assets/images/mbr-2-1920x1280.jpg\" condition=\"cardsAmount > 3\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background5.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth,'container-fluid': fullWidth}\">\n        <div mbr-cards=\"bootstrap\" mbr-class=\"{'media-container-row': !showPadding, 'row': showPadding }\">\n            <div class=\"card p-3 col-12 col-md-6\" mbr-class=\"{'col-lg-6': cardsAmount == '2', 'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper card1\">\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title align-left mbr-semibold mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">지니브레인</h4>\n                        <p class=\"mbr-text align-left mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                            뇌과학교육</p>\n                        <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobirise.co\" class=\"btn btn-md btn-secondary\" data-app-placeholder=\"Type Text\">더 알아보기 &gt;</a></div>\n                    </div>\n\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-6': cardsAmount == '2', 'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper card2\">\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title align-left mbr-semibold mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            아이엠선교회</h4>\n                        <p class=\"mbr-text align-left mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">기독교</p>\n                        <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobirise.co\" class=\"btn btn-md btn-secondary\" data-app-placeholder=\"Type Text\">더 알아보기 &gt;</a></div>\n                    </div>\n\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper card3\">\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title align-left mbr-semibold mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            교회</h4>\n                        <p class=\"mbr-text align-left mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                            기독교</p>\n                        <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobirise.co\" class=\"btn btn-md btn-secondary\" data-app-placeholder=\"Type Text\">더 알아보기 &gt;</a></div>\n                    </div>\n\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6 col-lg-3\" mbr-if=\"cardsAmount > 3\">\n                <div class=\"card-wrapper card4\">\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title align-left mbr-semibold mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">기업/단체</h4>\n                        <p class=\"mbr-text align-left mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                            각종기관</p>\n                        <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobirise.co\" class=\"btn btn-md btn-secondary\" data-app-placeholder=\"Type Text\">더 알아보기 &gt;</a></div>\n                    </div>\n\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "rP2LMTFdc1",
-          "_anchor": "extFeatures67-h",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
