@@ -30,7 +30,8 @@
       "additionalSetColors": [
         "#d61e37",
         "#000000",
-        "#2e2e2e"
+        "#2e2e2e",
+        "#656565"
       ]
     },
     "path": "@PROJECT_PATH@",
@@ -47,7 +48,7 @@
         "url": "https://fonts.googleapis.com/css?family=Black+Han+Sans:400"
       }
     ],
-    "uniqCompNum": 31,
+    "uniqCompNum": 42,
     "versionPublish": "4.12.0",
     "imageResize": true,
     "screenshot": "screenshot.png"
@@ -1016,71 +1017,6 @@
           "_params": {}
         },
         {
-          "alias": "mobirise4-blocks/components",
-          "_isSecondary": true,
-          "typeCompatible": "type",
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".nav-tabs .nav-item.open .nav-link:focus, .nav-tabs .nav-link.active:focus": {
-              "outline": "none"
-            },
-            ".nav-tabs": {
-              "-webkit-flex-wrap": "wrap",
-              "flex-wrap": "wrap",
-              "border-bottom": "1px solid @tabsColor",
-              ".nav-item": {
-                "padding": ".5rem"
-              }
-            },
-            ".first": {
-              "margin-left": "-24px"
-            },
-            ".nav-tabs .nav-link": {
-              "color": "@tabsColor",
-              "font-style": "normal",
-              "font-weight": "500",
-              "transition": "all .5s",
-              "border": "none",
-              "&:hover": {
-                "cursor": "pointer",
-                "color": "@activeTabColor"
-              },
-              "&.active": {
-                "font-weight": "500",
-                "color": "@activeTabColor",
-                "font-style": "normal"
-              }
-            },
-            "P": {
-              "color": "#879a9f"
-            },
-            "@media (max-width: 576px)": {
-              ".nav-tabs": {
-                "flex-direction": "column",
-                "justify-content": "center"
-              },
-              ".mbr-text, .nav-link": {
-                "text-align": "center"
-              }
-            }
-          },
-          "_name": "extTabs3",
-          "_customHTML": "<section class=\"extTabs\" group=\"Additional Blocks\" data-bg-video=\"{{bg.type == 'video'&amp;&amp;bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"mobirise-tabs\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"color\" title=\"Tabs Color\" name=\"tabsColor\" value=\"#073b4c\">\n        <input type=\"color\" title=\"Active Tab Color\" name=\"activeTabColor\" value=\"#149dcc\">\n        <select title=\"Tabs Count\" name=\"bootstrapTabs\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected=\"\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\" parallax=\"\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected=\"\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay&amp;&amp;bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay&amp;&amp;bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&amp;&amp;bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <h2 class=\"align-left pb-5 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">Innovative Technology\n        </h2>\n        <div class=\"row\">\n            <div class=\"col-12 col-md-12\">\n                <ul class=\"nav nav-tabs\" role=\"tablist\">\n                    <li mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"nav-item first\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\"><a class=\"nav-link mbr-fonts-style active show\" role=\"tab\" data-toggle=\"tab\" href=\"#extTabs7-by_tab0\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                            Programming</a></li>\n                    <li mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 1\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\"><a class=\"nav-link mbr-fonts-style active show\" role=\"tab\" data-toggle=\"tab\" href=\"#extTabs7-by_tab1\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                            Research</a></li>\n                    <li mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 2\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\"><a class=\"nav-link mbr-fonts-style active show\" role=\"tab\" data-toggle=\"tab\" href=\"#extTabs7-by_tab2\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                            Development</a></li>\n                    <li mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 3\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\"><a class=\"nav-link mbr-fonts-style active show\" role=\"tab\" data-toggle=\"tab\" href=\"#extTabs7-by_tab3\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                            Phases</a></li>\n                    <li mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\"><a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" href=\"#tabs1-1c_tab4\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                            Design</a></li>\n                    <li mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 5\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\"><a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" href=\"#tabs1-1c_tab5\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                            Architecture</a></li>\n                </ul>\n                <div class=\"tab-content\">\n                    <div id=\"tab1\" class=\"tab-pane in active\" role=\"tabpanel\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text pt-4 mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend enim sit amet lorem finibus auctor. Maecenas nulla tortor, interdum vitae magna ut, fermentum volutpat erat. Nam cursus aliquet ante a cursus. In blandit felis tincidunt suscipit auctor. Sed in elementum ex, ut gravida arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam et dolor ut sem aliquet vulputate.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab2\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 1\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text pt-4 mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Suspendisse potenti. Vestibulum vitae metus sit amet nulla dignissim viverra. Aenean sed bibendum felis. Sed commodo felis sit amet augue euismod, eget mollis felis pharetra. Praesent dignissim diam at neque placerat, quis condimentum dolor convallis. Vivamus vel venenatis nunc, ac mattis neque. Maecenas eu molestie est, ut suscipit ligula. Donec tempor, ex vel aliquet ultrices, tellus quam volutpat ante, non tincidunt nisi magna eget felis. </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab3\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 2\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text pt-4 mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Nam ornare tortor quam, eget ultrices ex vulputate sit amet. Nulla ligula nisi, tincidunt nec fringilla tincidunt, dignissim in mi. Nullam sed enim faucibus, dictum sapien maximus, ultricies erat. Morbi et diam eu dui interdum egestas. Maecenas nisi turpis, varius ut ipsum at, dapibus tempor lectus. Aliquam convallis lectus libero. Nulla facilisi. Praesent nec pellentesque magna. Donec accumsan aliquam ultrices. Mauris quis auctor massa, ac eleifend justo. Integer in ante pharetra lectus eleifend posuere.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab4\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 3\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text pt-4 mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Sed eleifend eleifend urna, mattis convallis nunc scelerisque eget. Mauris maximus nisl tortor, et facilisis dui hendrerit in. Vestibulum sit amet mollis ligula. Vivamus mattis efficitur efficitur. Donec sed dapibus dui. Proin a mollis neque. Quisque efficitur, risus vitae sodales commodo, arcu dui cursus metus, nec fringilla tortor dui non erat. Aliquam consequat purus sed interdum molestie. Nunc porta bibendum arcu in consectetur.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab5\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 4\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text pt-4 mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit, sed diam nonum nibhie\n                                    euismod. Facilisis at vero eros et accumsan et iusto odio dignissim qui blandit\n                                    praesent luptatum zzril. Donec ultrices enim lectus, nec volutpat lorem scelerisque\n                                    eu. Cras vitae imperdiet arcu. Duis posuere nunc a nisl condimentum luctus elenit\n                                    augue duis dolore.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab6\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 5\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text py-3 mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit, sed diam nonum nibhie\n                                    euismod. Facilisis at vero eros et accumsan et iusto odio dignissim qui blandit\n                                    praesent luptatum zzril.</p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "rP3P7CdTdV",
-          "_anchor": "extTabs3-r",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
           "alias": false,
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
@@ -1503,7 +1439,9 @@
           "_params": {}
         },
         {
-          "alias": false,
+          "alias": "mobirise4-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
@@ -1513,25 +1451,156 @@
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
             },
+            "h2, h3, p, h4": {
+              "color": "#0a0a0a"
+            },
+            ".img-block img": {
+              "height": "100%",
+              "max-height": "600px"
+            },
+            ".mbr-iconfont": {
+              "color": "@primaryColor",
+              "font-size": "2rem"
+            },
+            "& when (@customStyle)": {
+              ".form-control": {
+                "box-shadow": "none",
+                "margin-bottom": "15px",
+                "padding": "1.07em 1.07em",
+                "background-color": "@fieldColor",
+                "border": "1px solid @borderColor",
+                "color": "@formText",
+                "line-height": "1.43",
+                "min-height": "3.5em",
+                "border-radius": ".25rem",
+                "&:focus, &:hover": {
+                  "border": "1px solid @borderHover",
+                  "background-color": "@fieldHover"
+                }
+              },
+              ".form-group": {
+                "margin-bottom": "1rem"
+              },
+              "input::-webkit-input-placeholder, textarea::-webkit-input-placeholder": {
+                "color": "@formPlaceholder"
+              },
+              "input:-moz-placeholder, textarea:-moz-placeholder": {
+                "color": "@formPlaceholder"
+              },
+              ".jq-selectbox li, .jq-selectbox li": {
+                "background-color": "@fieldColor",
+                "color": "contrast(@fieldColor, #000000, #ffffff, 30%)"
+              },
+              ".jq-selectbox li:hover, .jq-selectbox li.selected": {
+                "background-color": "@fieldHover",
+                "color": "contrast(@fieldHover, #000000, #ffffff, 30%)"
+              },
+              ".jq-selectbox:hover .jq-selectbox__trigger-arrow": {
+                "border-top-color": "@fieldColor"
+              },
+              ".jq-selectbox .jq-selectbox__trigger-arrow": {
+                "border-top-color": "@fieldHover"
+              }
+            },
             ".mbr-text": {
-              "color": "#ffffff",
-              "margin": "0",
-              "padding-top": "1.5rem"
+              "color": "#767676"
             },
-            "div.b": {
-              "padding-top": "2rem"
+            "a:not([href]):not([tabindex])": {
+              "color": "#fff"
             },
-            "H5": {
-              "color": "#000000"
+            ".input-group-btn": {
+              "display": "block",
+              "text-align": "center"
             },
-            ".mbr-section-subtitle": {
-              "text-align": "left"
+            ".form-block": {
+              "padding": "2rem",
+              "box-shadow": "0 0 5px #a8a8a8",
+              "background-color": "#ffffff"
+            },
+            "textarea.form-control": {
+              "resize": "none"
+            },
+            ".card-img": {
+              "display": "none",
+              "position": "absolute",
+              "top": "0",
+              "left": "0",
+              "width": "3rem",
+              "text-align": "center"
+            },
+            ".media-container-row": {
+              "-webkit-align-items": "stretch",
+              "-ms-flex-align": "stretch",
+              "align-items": "stretch"
+            },
+            "& when (@showIcons)": {
+              ".list-block": {
+                "position": "relative",
+                "& h4,p": {
+                  "padding-left": "3.5rem"
+                }
+              },
+              ".card-img": {
+                "display": "block"
+              }
+            },
+            "@media (max-width: 767px)": {
+              "h2": {
+                "padding-top": "2rem"
+              }
+            },
+            "@media (min-width: 768px)": {
+              ".container > .row > .col-md-6": {
+                "&:first-child": {
+                  "padding-right": "30px"
+                },
+                "&:last-child": {
+                  "padding-left": "30px"
+                }
+              },
+              ".img-block-wrap": {
+                "position": "relative",
+                "& .img-block": {
+                  "position": "absolute",
+                  "top": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "right": "0",
+                  "overflow": "hidden",
+                  "& img": {
+                    "height": "100%"
+                  }
+                }
+              },
+              ".text-content": {
+                "padding-left": "2rem"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".google-map": {
+                "padding-bottom": "2rem"
+              },
+              ".img-block": {
+                "overflow": "hidden"
+              }
+            },
+            ".list-item-title": {
+              "color": "#ffffff"
+            },
+            ".content-title": {
+              "color": "#ffffff"
+            },
+            ".list-item-text": {
+              "color": "#ffffff"
+            },
+            ".content-subtitle": {
+              "color": "#ffffff"
             }
           },
-          "_name": "contacts2",
-          "_customHTML": "<section class=\"mbr-section contacts2\" group=\"Forms\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    <!---->\n    <mbr-parameters>\n        <!---->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n        <!---->\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitleSect\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitleSect\" checked>\n        <!---->\n        <input type=\"checkbox\" title=\"Show Adress\" name=\"showAdress\" checked>\n        <input type=\"checkbox\" title=\"Show Phone\" name=\"showPhone\" checked>\n        <input type=\"checkbox\" title=\"Show Mail\" name=\"showMail\" checked>\n        <!---->\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#2e2e2e\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <!---->\n    <!--Overlay-->\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <!--Container-->\n    <div class=\"container\">\n        <div class=\"row\">\n            <!--Titles-->\n            <div class=\"title col-12\">\n                <h2 mbr-if=\"showTitleSect\" class=\"align-left mbr-fonts-style\" mbr-theme-style=\"display-2\">\n                    Our Contacts\n                </h2>\n                <h3 mbr-if=\"showSubtitleSect\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                    문의하기</h3>\n            </div>\n            <div class=\"col-12\">\n                <div class=\"row justify-content-center\">\n                    <div class=\"col-12 col-md-4\" mbr-if=\"showAdress\">\n                        <div class=\"b b-adress\">\n                            <h5 class=\"align-left mbr-fonts-style m-0\" mbr-theme-style=\"display-5\">\n                                Address:\n                            </h5>\n                            <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                (41504)<br>대구광역시 북구 유통단지로 103, 2층 3호<br> (산격동, 복합건축자재관)\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md-4\" mbr-if=\"showPhone\">\n                        <div class=\"b b-phone\">\n                            <h5 class=\"align-left mbr-fonts-style m-0\" mbr-theme-style=\"display-5\">\n                                Phone:\n                            </h5>\n                            <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">☎ 1899-8188\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md-4\" mbr-if=\"showMail\">\n                        <div class=\"b b-mail\">\n                            <h5 class=\"align-left mbr-fonts-style m-0\" mbr-theme-style=\"display-5\">\n                                E-mail:\n                            </h5>\n                            <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">admin@ibhn.kr</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "rP2vQFkxwC",
-          "_anchor": "contacts2-f",
+          "_name": "extForm4",
+          "_customHTML": "<section class=\"mbr-section extForm\" group=\"Additional Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"formstyler, datepicker\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show List Title\" name=\"showListTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n\n        <select title=\"List items\" name=\"listItemsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n        </select>\n\n        <header>Style</header>\n        <input type=\"checkbox\" name=\"customStyle\" title=\"Custom Style\" checked>\n        <input type=\"color\" name=\"fieldColor\" title=\"Field\" value=\"#f5f5f5\" condition=\"customStyle\">\n        <input type=\"color\" name=\"fieldHover\" title=\"Field Hover\" value=\"#f5f5f5\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderColor\" title=\"Border\" value=\"#e8e8e8\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderHover\" title=\"Border Hover\" value=\"#e8e8e8\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formText\" title=\"Text\" value=\"#656565\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formPlaceholder\" title=\"Placeholders\" value=\"#656565\" condition=\"customStyle\">\n        \n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#2e2e2e\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=E0Pa8tYo94U\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay&&bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-md-5 col-lg-3 mb-5 img-block-wrap\">\n                <div class=\"img-block\">\n                    <img src=\"../_images/img/08.jpg\" alt=\"Mobirise\">\n                </div>\n            </div>\n            <div class=\"col-md-7 col-lg-5 mb-5 text-content\">\n                <h3 class=\"content-title mb-4 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".content-title\">문의</h3>\n                <p class=\"mb-4 content-subtitle mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".content-subtitle\">문의 주시면 자세히 설명 드리겠습니다.</p>\n                <div class=\"list-block mb-4\">\n                    <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                        <span mbr-icon class=\"mbr-iconfont mbri-pin\" style=\"color: rgb(214, 30, 55); fill: rgb(214, 30, 55);\"></span>\n                    </div>\n                    <h4 class=\"list-item-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showListTitle\" data-app-selector=\".list-item-title\">43 Millfield Ave</h4>\n                    <p class=\"list-item-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".list-item-text\">대구광역시 북구 유통단지로 103, 2층 3호<br>(산격동, 복합건축자재관)</p>\n                </div>\n                <div class=\"list-block mb-4\" mbr-if=\"listItemsAmount > 1\">\n                    <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                        <span mbr-icon class=\"mbr-iconfont mbri-mobile\" style=\"color: rgb(214, 30, 55); fill: rgb(214, 30, 55);\"></span>\n                    </div>\n                    <h4 class=\"list-item-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showListTitle\" data-app-selector=\".list-item-title\">대표전화 1899-8188</h4>\n                    <p class=\"list-item-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".list-item-text\">010-6658-9595, 053-382-0881, 053-812-8815<br> 팩스 : 053-382-0882, 053-812-8816</p>\n                </div>\n                <div class=\"list-block mb-4\" mbr-if=\"listItemsAmount > 2\">\n                    <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                        <span mbr-icon class=\"mbr-iconfont mbri-letter\" style=\"color: rgb(214, 30, 55); fill: rgb(214, 30, 55);\"></span>\n                    </div>\n                    <h4 class=\"list-item-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showListTitle\" data-app-selector=\".list-item-title\">admin@bhn.kr</h4>\n                    <p class=\"list-item-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".list-item-text\">Contact us for more information</p>\n                </div>\n            </div>\n            <div class=\"col-md-8 col-lg-4 block-content mb-5\">\n                <div class=\"form-block\">\n                    <div mbr-form>\n<!--Formbuilder Form-->\n<form action=\"admin@bhn.kr\" name=\"Mobirise Form\" method=\"POST\" class=\"mbr-form form-with-styler\">\n<div class=\"form-row\">\n<div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">양식을 작성해 주셔서 감사합니다!</div>\n<div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"> </div>\n</div>\n<div class=\"dragArea form-row\">\n<div class=\"col-md-12\">\n<h4 mbr-theme-style=\"display-5\" class=\"mbr-fonts-style mbr-section-subtitle mbr-fonts-style mb-4 mbr-light\">시작할 준비가 되셨습니까?</h4>\n</div>\n<div class=\"col-md-12 form-group\" data-for=\"name\">\n<input type=\"text\" name=\"name\" placeholder=\"이름\" data-form-field=\"Name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control input\" value>\n</div>\n<div data-for=\"email\" class=\"col-md-12 form-group\">\n<input type=\"text\" name=\"email\" placeholder=\"Email\" data-form-field=\"Email\" mbr-theme-style=\"display-7\" class=\"form-control input\" required=\"required\" value>\n</div>\n<div data-for=\"phone\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<input type=\"tel\" name=\"phone\" placeholder=\"Phone\" pattern=\"[0-9]{3}-[0-9]{3}-[0-9]{4}\" data-form-field=\"phone\" mbr-theme-style=\"display-7\" class=\"form-control\" value>\n</div>\n<div class=\"col-md-12 form-group\" data-for=\"message\">\n<textarea name=\"message\" placeholder=\"메시지\" data-form-field=\"Message\" mbr-theme-style=\"display-7\" class=\"form-control input\"></textarea>\n</div>\n<div mbr-buttons=\"true\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd\" class=\"col-md-12 input-group-btn mt-2\"><a type=\"submit\" class=\"btn btn-form btn-bgr btn-secondary\" data-app-placeholder=\"Type Text\">보내기</a></div>\n</div>\n</form><!--Formbuilder Form-->\n</div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rP43VQDzex",
+          "_anchor": "extForm4-13",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -1547,12 +1616,15 @@
             },
             "& when (@bg-type = 'color')": {
               "background-color": "@bg-value"
+            },
+            ".media-container-row .mbr-text": {
+              "color": "#2e2e2e"
             }
           },
           "_name": "footer6",
-          "_customHTML": "<section group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background5.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#2e2e2e\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"col-12\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\" data-app-placeholder=\"Type Text\">Copyright © 2020 Bhn Inc. 모든 권리 보유.<br></p>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "rP2ke6xC13",
-          "_anchor": "footer6-9",
+          "_customHTML": "<section group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background5.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"col-12\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\" data-app-placeholder=\"Type Text\">\n                    Copyright © 2009-2020 <b>bhn </b>Inc. 모든 권리 보유.\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rP400sFVx6",
+          "_anchor": "footer6-10",
           "_protectedParams": [],
           "_global": true,
           "_once": "footers",
