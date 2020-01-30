@@ -587,7 +587,7 @@
         {
           "_customTemplate": true,
           "_afterNavbarItem": false,
-          "_customHTML": "<!-- Type valid HTML here -->\n<div>   \n<lottie-player src=\"https://assets10.lottiefiles.com/packages/lf20_gaLz1Z.json\" background=\"transparent\" speed=\"1\" style=\"width: 300px; height: 300px;\" loop=\"\" controls=\"\" autoplay=\"\">\n</lottie-player>    \n</div>",
+          "_customHTML": "<!-- Type valid HTML here -->\n<div>   \n<lottie-player src=\"https://assets10.lottiefiles.com/packages/lf20_gaLz1Z.json\" background=\"transparent\" speed=\"1\" style=\"width: 100%; height: 300px;\" loop=\"\" autoplay=\"\">\n</lottie-player>    \n</div>",
           "_customCSS": "/* Type valid CSS here */\n\ndiv {\n  padding: 80px 0;\n  color: #777;\n  text-align: center;\n}\np {\n  font-size: 60px;\n  color: #777;\n}",
           "alias": "code-editor",
           "_tags": [
