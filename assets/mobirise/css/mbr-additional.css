@@ -1335,6 +1335,32 @@ section.lazy-placeholder:after {
 .cid-rPNSbvJLMl .mbr-section-btn {
   color: #656565;
 }
+.cid-rQcAzmSpUU {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-image: url("../../../assets/images/background1.jpg");
+}
+.cid-rQcAzmSpUU h3 {
+  text-align: center;
+}
+.cid-rQcAzmSpUU .mbr-section-subtitle {
+  font-weight: 300;
+}
+.cid-rQcAzmSpUU .card {
+  word-wrap: break-word;
+}
+.cid-rQcAzmSpUU .card:after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 3px;
+  margin: 0 auto;
+  background-color: #149dcc;
+}
+.cid-rQcAzmSpUU .mbr-iconfont {
+  font-size: 5rem;
+  color: #149dcc;
+}
 .cid-rPUwkuucvx {
   padding-top: 90px;
   padding-bottom: 0px;
