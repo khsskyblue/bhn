@@ -1985,6 +1985,27 @@ section.lazy-placeholder:after {
     text-align: center;
   }
 }
+.cid-rQCLaf3ZCD {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #55b4d4;
+}
+.cid-rQCLaf3ZCD .mbr-figure {
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.cid-rQCLaf3ZCD .mbr-figure img {
+  height: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 991px) {
+  .cid-rQCLaf3ZCD .mbr-figure img {
+    width: 100% !important;
+  }
+}
 .cid-rPUwrt2AKu {
   padding-top: 0px;
   padding-bottom: 0px;
