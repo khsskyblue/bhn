@@ -75,7 +75,7 @@
         "meta_descr": "",
         "header_custom": "<link rel=\"stylesheet\" href=\"navik.menu.css\">",
         "footer_custom": "<script src=\"https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js\"></script>\n<script src=\"navik.menu.js\"></script>",
-        "html_before": "<!-- Header -->\n<div class=\"navik-header\">\n  <div class=\"container\">\n\n    <!-- Navik header -->\n    <div class=\"navik-header-container\">\n\t\t\t\t\n      <!--Logo-->\n      <div class=\"logo\" data-mobile-logo=\"images/logo.png\" data-sticky-logo=\"images/logo.png\">\n        <a href=\"#\"><img src=\"images/logo.png\" alt=\"logo\"/></a>\n      </div>\n\t\t\t\t\n      <!-- Burger menu -->\n      <div class=\"burger-menu\">\n        <div class=\"line-menu line-half first-line\"></div>\n        <div class=\"line-menu\"></div>\n        <div class=\"line-menu line-half last-line\"></div>\n      </div>\n\n      <!--Navigation menu-->\n      <nav class=\"navik-menu\">\n        <ul>\n          <li><a href=\"#\">Menu</a>\n            <ul>\n              <li><a href=\"#\">Dropdown menu</a></li>\n              <li><a href=\"#\">Dropdown menu</a></li>\n              <li><a href=\"#\">Dropdown menu</a></li>\n            </ul>\n          </li>\n          <li><a href=\"#\">Menu</a></li>\n          <li><a href=\"#\">Menu</a></li>\n        </ul>\n      </nav>\n\n    </div>\n\n  </div>\n</div>"
+        "html_before": ""
       },
       "components": [
         {
