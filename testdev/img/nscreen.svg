@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="757.782" height="505.751" viewBox="0 0 757.782 505.751">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.188" y1="0.311" x2="0.326" y2="1.148" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#afe84e"/>
+      <stop offset="1" stop-color="#4a9026"/>
+    </linearGradient>
+    <filter id="Fill_1" x="115.845" y="103.768" width="301.214" height="330.065" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="23" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="34" result="blur"/>
+      <feFlood flood-color="#a5d575" flood-opacity="0.694"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_1" data-name="그룹 1" transform="translate(-485.5 -313.5)">
+    <path id="Mask" d="M139.8,257.9l-37.394,39.312a12.3,12.3,0,0,1-17.386-.7L3.26,211.922a12.309,12.309,0,0,1,.7-17.386l35.99-34.229L44.883,32.353s0-24.606,10.149-29.219c0,0,15.995-9.233,27.375,4L296.464,219.958s12.916,9.839.612,27.683c0,0-6.456,8.919-26.449,8.613Z" transform="translate(1029.46 352.946) rotate(45)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle" width="500.832" height="500.751" rx="75" transform="translate(488 316)" fill="#cdfec9" stroke="#fff" stroke-miterlimit="10" stroke-width="1.272" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <rect id="Rectangle-2" data-name="Rectangle" width="500.832" height="500.751" rx="75" transform="translate(488 316)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5" opacity="0.371"/>
+    <g transform="matrix(1, 0, 0, 1, 485.5, 313.5)" filter="url(#Fill_1)">
+      <path id="Fill_1-2" data-name="Fill 1" d="M73.535,2.817,6.273,50.849a14.968,14.968,0,0,0,0,24.367l67.262,48.032A14.973,14.973,0,0,0,97.214,111.07V15A14.973,14.973,0,0,0,73.535,2.817" transform="translate(310.06 308.83) rotate(180)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="573.702" height="556.991" viewBox="0 0 573.702 556.991">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.188" y1="0.311" x2="0.326" y2="1.148" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffbf62"/>
+      <stop offset="1" stop-color="#ff603e"/>
+    </linearGradient>
+    <filter id="Path_9" x="90.917" y="116.716" width="321.57" height="213.784" filterUnits="userSpaceOnUse">
+      <feOffset dy="7" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="28" result="blur"/>
+      <feFlood flood-color="#d96e39" flood-opacity="0.396"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_2" data-name="그룹 2" transform="translate(-509.5 -321.5)">
+    <path id="Fill_1_Copy" data-name="Fill 1 Copy" d="M388.8,118.406h0C388.8,53.005,336.855,0,272.761,0H116.039C51.945,0,0,53.005,0,118.406,0,151.1,25.973,177.6,58.029,177.6H330.79c32.037,0,58.01-26.5,58.01-59.194" transform="translate(694.402 664.8)" fill="url(#linear-gradient)"/>
+    <path id="Fill_4_Copy" data-name="Fill 4 Copy" d="M117.6,0A117.6,117.6,0,1,1,0,117.6,117.6,117.6,0,0,1,117.6,0" transform="translate(771.202 405.6)" fill="url(#linear-gradient)"/>
+    <path id="Fill_1" data-name="Fill 1" d="M495.432,147.864h0A147.853,147.853,0,0,0,347.568,0h-199.7A147.853,147.853,0,0,0,0,147.864a73.926,73.926,0,0,0,73.944,73.92H421.512a73.921,73.921,0,0,0,73.92-73.92" transform="translate(512 654.207)" fill="#fff"/>
+    <path id="Fill_1-2" data-name="Fill 1" d="M495.432,147.864h0A147.853,147.853,0,0,0,347.568,0h-199.7A147.853,147.853,0,0,0,0,147.864a73.926,73.926,0,0,0,73.944,73.92H421.512a73.921,73.921,0,0,0,73.92-73.92" transform="translate(512 654.207)" fill="#fff0dd" stroke="rgba(255,255,255,0.27)" stroke-miterlimit="10" stroke-width="1.272" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <path id="Fill_1-3" data-name="Fill 1" d="M495.432,147.864h0A147.853,147.853,0,0,0,347.568,0h-199.7A147.853,147.853,0,0,0,0,147.864a73.926,73.926,0,0,0,73.944,73.92H421.512a73.921,73.921,0,0,0,73.92-73.92" transform="translate(512 654.207)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5" opacity="0.371"/>
+    <path id="Fill_4" data-name="Fill 4" d="M148.8,0A148.8,148.8,0,1,1,0,148.8,148.8,148.8,0,0,1,148.8,0" transform="translate(612.802 324)" fill="#fff0dd"/>
+    <path id="Fill_4-2" data-name="Fill 4" d="M148.8,0A148.8,148.8,0,1,1,0,148.8,148.8,148.8,0,0,1,148.8,0" transform="translate(612.802 324)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5" opacity="0.371"/>
+    <g transform="matrix(1, 0, 0, 1, 509.5, 321.5)" filter="url(#Path_9)">
+      <path id="Path_9-2" data-name="Path 9" d="M0,0S22,24,68,24,134,0,134,0" transform="translate(184.5 202.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="26"/>
+    </g>
+  </g>
+</svg>

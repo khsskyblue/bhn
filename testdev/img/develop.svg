@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="690.394" height="703.185" viewBox="0 0 690.394 703.185">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.188" y1="0.311" x2="0.326" y2="1.148" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffbf62"/>
+      <stop offset="1" stop-color="#ff603e"/>
+    </linearGradient>
+    <filter id="Stroke_1" x="123.26" y="63.131" width="321.259" height="300.757" filterUnits="userSpaceOnUse">
+      <feOffset dy="7" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="28" result="blur"/>
+      <feFlood flood-color="#d96e39" flood-opacity="0.396"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Message_Copy_16" data-name="Message Copy 16" transform="translate(3.362 3.362)">
+    <g id="Group" transform="translate(0)">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M122.141,457.386,92.3,426.571A53.279,53.279,0,0,1,76.961,388.99V372.983c0-3.686-.316-7.078-.512-10.608h4.813C75.03,271.359,0,239.842,0,157.549,0,70.478,73.283,0,163.779,0c90.527,0,163.795,70.478,163.795,157.549,0,76.058-65.208,108.447-79.233,186.457,0,0-1.139,8.356-1.928,20.132h-6.287c-.353,5.865-.614,12.422-.614,19.3v5.553a53.34,53.34,0,0,1-15.336,37.581l-29.859,30.815a49.856,49.856,0,0,1-72.176,0Z" transform="translate(377.304 87.202) rotate(19)" fill="url(#linear-gradient)"/>
+      <g id="Group_2" data-name="Group 2" transform="matrix(0.891, -0.454, 0.454, 0.891, 0, 182.536)">
+        <g id="Stroke_3" data-name="Stroke 3">
+          <path id="Stroke_3-2" data-name="Stroke 3" d="M302.452,451.866c.969-14.614,2.366-24.983,2.366-24.983,17.215-96.8,97.253-137,97.253-231.378C402.071,87.458,312.14,0,201.026,0,89.949,0,0,87.458,0,195.505,0,298.284,93.284,337.229,99.88,451.866H302.452Z" fill="none"/>
+          <path id="Stroke_3-3" data-name="Stroke 3" d="M302.452,451.866c.969-14.614,2.366-24.983,2.366-24.983,17.215-96.8,97.253-137,97.253-231.378C402.071,87.458,312.14,0,201.026,0,89.949,0,0,87.458,0,195.505,0,298.284,93.284,337.229,99.88,451.866H302.452Z" fill="#fff0dd" stroke="rgba(255,255,255,0.27)" stroke-miterlimit="10" stroke-width="1.272" style="mix-blend-mode: multiply;isolation: isolate"/>
+          <path id="Stroke_3-4" data-name="Stroke 3" d="M302.452,451.866c.969-14.614,2.366-24.983,2.366-24.983,17.215-96.8,97.253-137,97.253-231.378C402.071,87.458,312.14,0,201.026,0,89.949,0,0,87.458,0,195.505,0,298.284,93.284,337.229,99.88,451.866H302.452Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5" opacity="0.371"/>
+        </g>
+        <g transform="matrix(0.89, 0.45, -0.45, 0.89, 81.4, -167.16)" filter="url(#Stroke_1)">
+          <path id="Stroke_1-2" data-name="Stroke 1" d="M0,0C49.93,0,93.843,25.057,118.976,62.643" transform="matrix(0.89, -0.45, 0.45, 0.89, 213.16, 210.63)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="26"/>
+        </g>
+        <g id="Stroke_5" data-name="Stroke 5" transform="translate(101.776 448.357)">
+          <path id="Stroke_5-2" data-name="Stroke 5" d="M.633,31.852A62.723,62.723,0,0,0,19.6,76.828l36.908,36.878a63.084,63.084,0,0,0,89.26,0l36.926-36.878a62.8,62.8,0,0,0,18.966-44.976V25.206c0-9.066.391-17.667.894-25.206H0C.242,4.226.633,8.284.633,12.7Z" fill="none"/>
+          <path id="Stroke_5-3" data-name="Stroke 5" d="M.633,31.852A62.723,62.723,0,0,0,19.6,76.828l36.908,36.878a63.084,63.084,0,0,0,89.26,0l36.926-36.878a62.8,62.8,0,0,0,18.966-44.976V25.206c0-9.066.391-17.667.894-25.206H0C.242,4.226.633,8.284.633,12.7Z" fill="#fff0dd" stroke="rgba(255,255,255,0.27)" stroke-miterlimit="10" stroke-width="1.272" style="mix-blend-mode: multiply;isolation: isolate"/>
+          <path id="Stroke_5-4" data-name="Stroke 5" d="M.633,31.852A62.723,62.723,0,0,0,19.6,76.828l36.908,36.878a63.084,63.084,0,0,0,89.26,0l36.926-36.878a62.8,62.8,0,0,0,18.966-44.976V25.206c0-9.066.391-17.667.894-25.206H0C.242,4.226.633,8.284.633,12.7Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5" opacity="0.371"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

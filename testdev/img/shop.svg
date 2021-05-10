@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="565.408" height="674.09" viewBox="0 0 565.408 674.09">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.188" y1="0.311" x2="0.326" y2="1.148" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f5989b"/>
+      <stop offset="1" stop-color="#f04857"/>
+    </linearGradient>
+    <filter id="Rectangle" x="99.5" y="428" width="208" height="56" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#ff7b69" flood-opacity="0.31"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_Copy" x="207.5" y="504" width="140" height="56" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur-2"/>
+      <feFlood flood-color="#ff7b69" flood-opacity="0.31"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Fill_3" x="35.853" y="0" width="404.487" height="446.259" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="28" result="blur-3"/>
+      <feFlood flood-color="#d0021b" flood-opacity="0.184"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Message_Copy_16" data-name="Message Copy 16" transform="translate(2.5 64)">
+    <g id="Group">
+      <path id="Stroke_1_Copy" data-name="Stroke 1 Copy" d="M295.04,324H36.968C16.55,324,0,309.082,0,290.677L9.221,12.756C9.221,5.708,15.563,0,23.381,0H308.627c7.819,0,14.151,5.708,14.151,12.756L332,290.677C332,309.082,315.45,324,295.04,324Z" transform="matrix(0.899, -0.438, 0.438, 0.899, 122.476, 318.88)" fill="url(#linear-gradient)"/>
+      <g id="Stroke_1" data-name="Stroke 1" transform="translate(0 156)">
+        <path id="Stroke_1-2" data-name="Stroke 1" d="M451.2,378.956A178.3,178.3,0,0,1,334.559,422.4H50.241C22.492,422.4,0,402.951,0,378.956L12.532,16.63C12.532,7.442,21.15,0,31.776,0h387.66c10.626,0,19.232,7.442,19.232,16.63Z" fill="none"/>
+        <path id="Stroke_1-3" data-name="Stroke 1" d="M448.738,374.7c0,43.027-27.443,47.7-70.279,47.7H50.241C22.492,422.4,0,402.951,0,378.956L12.532,16.63C12.532,7.442,21.15,0,31.776,0h387.66c10.626,0,19.232,7.442,19.232,16.63Z" fill="#fcd" stroke="#fff" stroke-miterlimit="10" stroke-width="1.272" style="mix-blend-mode: multiply;isolation: isolate"/>
+        <path id="Stroke_1-4" data-name="Stroke 1" d="M448.738,374.7c0,43.027-27.443,47.7-70.279,47.7H50.241C22.492,422.4,0,402.951,0,378.956L12.532,16.63C12.532,7.442,21.15,0,31.776,0h387.66c10.626,0,19.232,7.442,19.232,16.63Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5" opacity="0.371"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -2.5, -64)" filter="url(#Rectangle)">
+        <rect id="Rectangle-2" data-name="Rectangle" width="184" height="32" rx="4" transform="translate(110.5 432)" fill="#fff"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -2.5, -64)" filter="url(#Rectangle_Copy)">
+        <rect id="Rectangle_Copy-2" data-name="Rectangle Copy" width="116" height="32" rx="4" transform="translate(218.5 508)" fill="#fff"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -2.5, -64)" filter="url(#Fill_3)">
+        <path id="Fill_3-2" data-name="Fill 3" d="M227.051,223.632c-.034-.034-.068-.056-.1-.09V107.9C226.949,48.4,178.186,0,118.248,0S9.547,48.4,9.547,107.9V223.542c-.034.034-.068.056-.1.09a31.833,31.833,0,0,0,0,45.26,32.416,32.416,0,0,0,45.586,0,31.833,31.833,0,0,0,0-45.26.622.622,0,0,0-.1-.079V107.9c0-34.652,28.409-62.851,63.319-62.851s63.319,28.2,63.319,62.851V223.542c-.034.034-.079.056-.113.09a31.853,31.853,0,0,0,0,45.26,32.429,32.429,0,0,0,45.6,0,31.853,31.853,0,0,0,0-45.26" transform="translate(109.85 64)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
